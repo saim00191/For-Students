@@ -1,6 +1,6 @@
 import Container from '@/shared/Container'
 import React from 'react'
-import { Josefin_Sans, Lato } from "next/font/google";
+import { Josefin_Sans } from "next/font/google";
 import Image from 'next/image';
 import Image1 from '@/images/TopCategoryImg1.png'
 import Image2 from '@/images/TopCategoryImg2.png'
@@ -10,10 +10,7 @@ const josefinFont = Josefin_Sans({
     subsets: ["latin"],
     weight: ["400", "700"],
   });
-  const lato = Lato({
-    subsets: ["latin"],
-    weight: ["400", "700"],
-  });
+
 const TopCategories = () => {
   return (
       <Container className='py-12 flex justify-center flex-col w-full item-center'>

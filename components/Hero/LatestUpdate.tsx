@@ -1,16 +1,13 @@
 import Image from 'next/image'
 import React from 'react'
 import Image1 from '@/images/LatestUpdateImg.png'
-import { Josefin_Sans, Lato } from "next/font/google";
+import { Josefin_Sans } from "next/font/google";
 import Container from '@/shared/Container';
 const josefinFont = Josefin_Sans({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
-const lato = Lato({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
+
 
 const LatestUpdate = () => {
   return (

@@ -1,12 +1,8 @@
 import Container from "@/shared/Container";
-import { Josefin_Sans, Lato } from "next/font/google";
+import { Josefin_Sans } from "next/font/google";
 import Image from "next/image";
 import Items from "./ProductsDetailsItemList";
 const josefinFont = Josefin_Sans({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
-const lato = Lato({
   subsets: ["latin"],
   weight: ["400", "700"],
 });

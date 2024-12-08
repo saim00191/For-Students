@@ -1,5 +1,5 @@
 import Container from "@/shared/Container";
-import { Josefin_Sans, Lato } from "next/font/google";
+import { Josefin_Sans } from "next/font/google";
 import React from "react";
 
 const josefinFont = Josefin_Sans({
