@@ -2,7 +2,6 @@ import Container from "@/shared/Container";
 import { Josefin_Sans, Lato } from "next/font/google";
 import Image1 from "@/images/Featured1.png";
 import { FaPlus, FaMinus } from "react-icons/fa6";
-import Feature from '../../components/About/Feture'
 import Image from "next/image";
 const josefinFont = Josefin_Sans({
   subsets: ["latin"],

@@ -21,12 +21,12 @@ const ShopexOffer = () => {
         What Shopex Offer!
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[22px] py-6 ">
-        {ShopexOfferItem.map((item, index) => (
+        {ShopexOfferItem.map((item) => (
           <div
-            key={index}
+            key={item.id}
             className="w-[270px] h-[320px] py-12  flex flex-col justify-between items-center"
           >
-            {item}
+            {item.svg}
             <p
               className={`${josefinFont.className} text-[22px] text-[25.87] text-[#151875]`}
             >
