@@ -18,9 +18,9 @@ const roboto = Roboto({
 const Footer = () => {
   return (
     <div className="bg-[#EEEFFB] py-12 relative" >
-      <Container className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-12">
+      <Container className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-5 gap-8 md:gap-12">
         {/* First Column */}
-        <div className="flex flex-col gap-5 px-3 lg:px-0 justify-center  col-span-1 md:col-span-2 lg:col-span-1">
+        <div className="flex flex-col gap-5 px-3 lg:px-0 justify-center  col-span-1 lg:col-span-2">
           <h2
             className={`${josefinFont.className} text-[32px] sm:text-[38px] text-[#000000] leading-[40px] sm:leading-[44px]`}
           >

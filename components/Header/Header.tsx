@@ -3,6 +3,7 @@ import HeaderTop from "./HeaderTop";
 import Container from "@/shared/Container";
 import { CiSearch } from "react-icons/ci";
 import { Josefin_Sans, Lato } from "next/font/google";
+import Link from "next/link";
 
 const josefinFont = Josefin_Sans({
   subsets: ["latin"],
@@ -13,7 +14,13 @@ const lato = Lato({
   weight: ["400", "700"],
 });
 
-const HeaderNavItems = ["Pages", "Products", "Blogs", "Shop", "Contact"];
+const HeaderNavItems = [
+  {title : 'Home' , href:'/'},
+  {title : 'Pages' , href:'/pages'},
+  {title : 'Blogs' , href:'/blogs'},
+  {title : 'Shop' , href:'/shop'},
+  {title : 'Contact' , href:'/contact'},
+];
 
 const Header = () => {
   return (
@@ -51,12 +58,14 @@ const Header = () => {
                   </svg>
                 </div>
                 {HeaderNavItems.map((item, index) => (
+                <Link href={item.href}>
                   <p
                     key={index}
                     className={`${lato.className} font-normal text-[16px] leading-[20px] hover:text-[#FB2E86] cursor-pointer`}
                   >
-                    {item}
+                    {item.title}
                   </p>
+                  </Link>
                 ))}
               </div>
             </div>
