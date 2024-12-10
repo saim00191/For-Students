@@ -2,6 +2,7 @@ import Container from "@/shared/Container";
 import React from "react";
 import { EmailAndPhone, HeaderTopItems } from "./HeaderTopItems";
 import { Josefin_Sans } from "next/font/google";
+import Link from "next/link";
 const josefinFont = Josefin_Sans({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -32,7 +33,7 @@ const HeaderTop = () => {
               <p
                 className={`${josefinFont.className} flex gap-1 items-center font-semibold text-[16px] leading-[16px] text-[#f1f1f1]`}
               >
-                {item.title}
+               {item.title === 'Login' ? <Link href='/login'>{item.title}</Link> :  item.title}
               </p>
               <span className="-mt-1"> {item.icon}</span>
             </div>
