@@ -52,7 +52,7 @@ const LatestProducts = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-3 py-6 gap-8">
         {Images.map((item, index) => (
-          <div key={index} className="w-[365px] h-[306px] relative group">
+          <div key={index} className="w-full xs:w-[365px] h-[306px] relative group">
             <div className="h-[270px] bg-[#f7f7f7] flex items-center justify-center">
               <Image src={item} alt="Product" className="w-[223px] h-[229px]" />
             </div>

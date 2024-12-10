@@ -14,7 +14,7 @@ const lato = Lato({
 });
 const UniqueFeatures = () => {
   return (
-    <div className="bg-[#F1F0FF] w-full h-full lgl:h-[579px] flex items-center justify-center">
+    <div className="bg-[#F1F0FF] w-full  h-full lgl:h-[579px] flex items-center justify-center">
       <Container className="lgl:h-[550px] py-5 h-full w-full flex flex-col lgl:flex-row items-center justify-around">
         <div className="relative flex items-center justify-center">
           <div className="max-w-full h-auto lgl:hidden">
@@ -89,14 +89,14 @@ const UniqueFeatures = () => {
             >
               Add To Cart
             </button>
-            <div className="flex flex-col justify-center">
+            <div className="hidden xs:flex flex-col justify-center">
               <p
                 className={`${josefinFont.className} text-[14px] leading-[16.41px] tracking-[2px] text-[#000000]`}
               >
                 B&B Italian Sofa{" "}
               </p>
               <span
-                className={`${lato.className} font-normal text-[14px] leading-[16.8px] text-[#151875] cursor-pointer`}
+                className={`${lato.className}  font-normal text-[14px] leading-[16.8px] text-[#151875] cursor-pointer`}
               >
                 $32.00
               </span>
