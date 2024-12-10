@@ -13,7 +13,7 @@ const lato = Lato({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
-const Contant = ({ tittle, text, price, price1, image }: GridItemsProps) => {
+const Contant = ({ tittle, price, price1, image }: GridItemsProps) => {
   return (
     <div>
       <Container className=" w-full  ">

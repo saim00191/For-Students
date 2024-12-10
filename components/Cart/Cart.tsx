@@ -3,7 +3,6 @@ import Image1 from "@/images/CartImg1.png";
 import Image2 from "@/images/CartImg2.png";
 import Image3 from "@/images/CartImg3.png";
 import Image4 from "@/images/CartImg4.png";
-import Image5 from "@/images/CartImg5.png";
 import { FaPlus, FaMinus } from "react-icons/fa6";
 import Image from "next/image";
 import { Josefin_Sans, Lato } from "next/font/google";

@@ -17,7 +17,7 @@ const lato = Lato({
 const LatestBlogs = () => {
   return (
     <Container className="py-12 flex flex-col items-center justify-center">
-      <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[26px]">
+      <div className="grid  grid-cols-1 md:grid-cols-2 lgl:grid-cols-3 gap-[26px]">
         <div className="w-[370px] h-[493px]  flex flex-col items-center">
           <div className="w-full h-[255px] rounded-[8px]">
             <Image src={Image1} alt="Image1" />

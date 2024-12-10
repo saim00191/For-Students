@@ -1,11 +1,10 @@
-import Blogspage from '@/components/Blogs/Blogs'
-
+import ShopList from '@/components/ShopList.tsx/ShopList'
 import React from 'react'
 
 const Home = () => {
   return (
       <div>
-          <Blogspage/>
+          <ShopList/>
     </div>
   )
 }

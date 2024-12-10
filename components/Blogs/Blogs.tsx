@@ -1,9 +1,9 @@
 import Container from "../../shared/Container";
 import React from "react";
 import Hero from "@/shared/HeroShared";
-import image1 from "../../images/blog1.png";
-import image2 from "../../images/blog2.png";
-import image3 from "../../images/blog3.png";
+import image1 from "@/images/BlogImg1.png";
+import image2 from "@/images/BlogImg2.png";
+import image3 from "@/images/BlogImg3.png";
 import Image from "next/image";
 import Link from "next/link";
 import BlogSidebar from "./BlogsSideBar";
@@ -82,7 +82,7 @@ const Blogspage = () => {
                   voluptatibus, maxime, id illum corporis nobis mollitia
                   maiores! Quod eum rem aspernatur veritatis natus.
                 </p>
-                <Link href={""}>
+                <Link href='/blogs/singleblogs'>
                   <p
                     className={`text-[#151875] items-center gap-1 flex ${lato.className} font-semibold text-[18px] leading-[25px] `}
                   >
@@ -92,7 +92,7 @@ const Blogspage = () => {
                     ></span>
                   </p>
                 </Link>
-                '
+                
               </div>
             </div>
             <div className="flex flex-col gap-11">
@@ -163,7 +163,6 @@ const Blogspage = () => {
                     ></span>
                   </p>
                 </Link>
-                '
               </div>
             </div>
             <div className="flex flex-col gap-11">
@@ -234,7 +233,6 @@ const Blogspage = () => {
                     ></span>
                   </p>
                 </Link>
-                '
               </div>
             </div>
           </div>

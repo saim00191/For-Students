@@ -15,40 +15,36 @@ const lato = Lato({
 const UniqueFeatures = () => {
   return (
     <div className="bg-[#F1F0FF] w-full h-full lgl:h-[579px] flex items-center justify-center">
-      <Container className="lgl:h-[550px] h-full w-full flex flex-col lgl:flex-row items-center justify-around">
+      <Container className="lgl:h-[550px] py-5 h-full w-full flex flex-col lgl:flex-row items-center justify-around">
         <div className="relative flex items-center justify-center">
+          <div className="max-w-full h-auto lgl:hidden">
+            <svg
+              viewBox="0 0 481 450"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-full h-auto"
+            >
+              <path
+                d="M481 232C481 362.339 412.339 450 282 450C151.661 450 0 376.339 0 246C0 115.661 142 -23.9999 251.5 4.00004C361 32 481 101.661 481 232Z"
+                fill="#F5E1FC"
+              />
+            </svg>
+          </div>
 
-      
-<div className="max-w-full h-auto lgl:hidden">
-  <svg
-    viewBox="0 0 481 450"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className="w-full h-auto"
-  >
-    <path
-      d="M481 232C481 362.339 412.339 450 282 450C151.661 450 0 376.339 0 246C0 115.661 142 -23.9999 251.5 4.00004C361 32 481 101.661 481 232Z"
-      fill="#F5E1FC"
-    />
-  </svg>
-</div>
-
-
-<div className="max-w-full h-auto hidden lgl:block">
-  <svg
-    width="481"
-    height="450"
-    viewBox="0 0 481 450"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M481 232C481 362.339 412.339 450 282 450C151.661 450 0 376.339 0 246C0 115.661 142 -23.9999 251.5 4.00004C361 32 481 101.661 481 232Z"
-      fill="#F5E1FC"
-    />
-  </svg>
-</div>
-
+          <div className="max-w-full h-auto hidden lgl:block">
+            <svg
+              width="481"
+              height="450"
+              viewBox="0 0 481 450"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M481 232C481 362.339 412.339 450 282 450C151.661 450 0 376.339 0 246C0 115.661 142 -23.9999 251.5 4.00004C361 32 481 101.661 481 232Z"
+                fill="#F5E1FC"
+              />
+            </svg>
+          </div>
 
           <Image
             src={Image1}

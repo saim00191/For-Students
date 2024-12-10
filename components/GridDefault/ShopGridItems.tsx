@@ -4,15 +4,12 @@ import React from "react";
 import  GridItemsProps from "@/types/GridItems";
 
 import Image from "next/image";
-import { Josefin_Sans, Lato } from "next/font/google";
+import { Josefin_Sans } from "next/font/google";
 const josefinFont = Josefin_Sans({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
-const lato = Lato({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
+
 const ShopGridItems = ({ tittle, price, price1, image }: GridItemsProps) => {
   return (
     <div>

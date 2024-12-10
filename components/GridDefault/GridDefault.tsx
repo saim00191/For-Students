@@ -20,6 +20,21 @@ import image12 from "@/images/Grid12.png";
 import Partner from "@/shared/Partners";
 
 const GridDeault = () => {
+  const products = [
+    { id: 1, tittle: "Vel elit euismod", price: "$26.00", price1: "$42.00", image: image1 },
+    { id: 2, tittle: "Ultricies condimentum imperdiet", price: "$26.00", price1: "$42.00", image: image2 },
+    { id: 3, tittle: "Vitae suspendisse sed", price: "$26.00", price1: "$42.00", image: image3 },
+    { id: 4, tittle: "Sed at fermentum", price: "$26.00", price1: "$42.00", image: image4 },
+    { id: 5, tittle: "Fusce pellentesque at", price: "$26.00", price1: "$42.00", image: image5 },
+    { id: 6, tittle: "Vestibulum magna laoreet", price: "$26.00", price1: "$42.00", image: image6 },
+    { id: 7, tittle: "Sollicitudin amet orci", price: "$26.00", price1: "$42.00", image: image7 },
+    { id: 8, tittle: "Ultrices mauris sit", price: "$26.00", price1: "$42.00", image: image8 },
+    { id: 9, tittle: "Pellentesque condimentum ac", price: "$26.00", price1: "$42.00", image: image9 },
+    { id: 10, tittle: "Cras scelerisque velit", price: "$26.00", price1: "$42.00", image: image10 },
+    { id: 11, tittle: "Lectus vulputate faucibus", price: "$26.00", price1: "$42.00", image: image11 },
+    { id: 12, tittle: "Purus risus, ut", price: "$26.00", price1: "$42.00", image: image12 },
+  ];
+
   return (
     <div>
       <Hero
@@ -33,81 +48,18 @@ const GridDeault = () => {
         tittle="Per Page:"
         tittle1="Sort By:"
         tittle2="View:"
-        icons={[<IoGrid />, <FaList />]}
+        icons={[<IoGrid key="grid-icon" />, <FaList key="list-icon" />]}
       />
       <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center">
-        <ShopGridItems
-          tittle="Vel elit euismod"
-          price="$26.00 "
-          price1="$42.00"
-          image={image1}
-        />
-        <ShopGridItems
-          tittle="Ultricies condimentum imperdiet"
-          price="$26.00"
-          price1="$42.00"
-          image={image2}
-        />
-        <ShopGridItems
-          tittle="Vitae suspendisse sed"
-          price="$26.00"
-          price1="$42.00"
-          image={image3}
-        />
-        <ShopGridItems
-          tittle="Sed at fermentum"
-          price="$26.00"
-          price1="$42.00"
-          image={image4}
-        />
-        <ShopGridItems
-          tittle="Fusce pellentesque at"
-          price="$26.00"
-          price1="$42.00"
-          image={image5}
-        />
-        <ShopGridItems
-          tittle="Vestibulum magna laoreet"
-          price="$26.00"
-          price1="$42.00"
-          image={image6}
-        />
-        <ShopGridItems
-          tittle="Sollicitudin amet orci"
-          price="$26.00"
-          price1="$42.00"
-          image={image7}
-        />
-        <ShopGridItems
-          tittle="Ultrices mauris sit"
-          price="$26.00"
-          price1="$42.00"
-          image={image8}
-        />
-        <ShopGridItems
-          tittle="Pellentesque condimentum ac"
-          price="$26.00"
-          price1="$42.00"
-          image={image9}
-        />
-        <ShopGridItems
-          tittle="Cras scelerisque velit"
-          price="$26.00"
-          price1="$42.00"
-          image={image10}
-        />
-        <ShopGridItems
-          tittle="Lectus vulputate faucibus"
-          price="$26.00"
-          price1="$42.00"
-          image={image11}
-        />
-        <ShopGridItems
-          tittle="Purus risus, ut"
-          price="$26.00"
-          price1="$42.00"
-          image={image12}
-        />
+        {products.map((product) => (
+          <ShopGridItems
+            key={product.id}
+            tittle={product.tittle}
+            price={product.price}
+            price1={product.price1}
+            image={product.image}
+          />
+        ))}
       </Container>
       <Partner />
     </div>
