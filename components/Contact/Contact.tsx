@@ -6,7 +6,7 @@ const Contact = () => {
   return (
       <div>
           <ContactTop />
-          {/* <ContactBottom/> */}
+          <ContactBottom/>
     </div>
   )
 }
