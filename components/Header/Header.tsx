@@ -43,9 +43,9 @@ const Header = () => {
     };
   }, [isOpen]);
   return (
-    <div className=" sticky top-0 z-50">
+    <div className="">
       <HeaderTop />
-      <div className="bg-white w-full h-[60px] lg:flex items-center ">
+      <div className="bg-white w-full h-[60px] -mt-2 lg:flex items-center ">
         <Container className="lg:flex-1">
           <div className="h-[40px]  flex my-2 px-2 lg:px-0 items-center justify-between">
             <div className="lg:flex lg:items-center  lg:gap-20">
@@ -106,7 +106,7 @@ const Header = () => {
               )}
             </div>
             {isOpen && (
-              <div className="lg:hidden flex flex-col gap-12  absolute top-36 md:top-28 right-1 z-50 bg-white w-full h-[100%] py-5 px-2">
+              <div className="lg:hidden flex flex-col gap-12 -mt-2  absolute top-[140px] md:top-28 right-0  bg-white z-50 w-full h-[100%] py-8 px-2">
                 <Link href="/">
                   <div className="flex items-center gap-0.5 hover:text-[#FB2E86] cursor-pointer">
                     <p
@@ -135,7 +135,7 @@ const Header = () => {
                   <Link href={item.href} key={item.id}>
                     <p
                       onClick={() => setIsOpen(false)}
-                      className={`${lato.className} font-normal text-[16px] leading-[20px] hover:text-[#FB2E86] cursor-pointer`}
+                      className={`${lato.className} font-normal text-[16px] leading-[20px] py-2 hover:text-[#FB2E86] cursor-pointer`}
                     >
                       {item.title}
                     </p>

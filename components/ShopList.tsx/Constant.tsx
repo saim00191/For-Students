@@ -1,9 +1,15 @@
+'use client'
 import Container from "@/shared/Container";
 import React from "react";
 import { Josefin_Sans, Lato } from "next/font/google";
 import Image from "next/image";
 
 import GridItemsProps from "@/types/GridItems";
+import { useDispatch } from "react-redux";
+import { addToCart } from "@/redux/productSlice";
+import { addToWishlist } from "@/redux/wishlistSlice";
+import Link from "next/link";
+import { addToSingleProduct } from "@/redux/singleProduct";
 
 const josefinFont = Josefin_Sans({
   subsets: ["latin"],
@@ -13,7 +19,8 @@ const lato = Lato({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
-const Contant = ({ tittle, price, price1, image }: GridItemsProps) => {
+const Contant = ({ tittle, price, price1, image , id}: GridItemsProps) => {
+  const dispatch = useDispatch();
   return (
     <div>
       <Container className=" w-full  ">
@@ -48,7 +55,7 @@ const Contant = ({ tittle, price, price1, image }: GridItemsProps) => {
                 <p
                   className={`${josefinFont.className} flex gap-4 text-[15px] leading-[16.4px]  text-[#151875] font-normal`}
                 >
-                  {price}{" "}
+                  ${price}{" "}
                   <span
                     className={`${josefinFont.className} line-through text-[15px] leading-[16.4px]  text-[#F701A8] font-normal`}
                   >
@@ -83,7 +90,15 @@ const Contant = ({ tittle, price, price1, image }: GridItemsProps) => {
                 </p>
               </div>
               <div className="gap-4  left-2 flex   ">
-                <span className="hover:bg-white rounded-full w-[24px] h-[24px] flex items-center justify-center cursor-pointer">
+                <span onClick={() => dispatch(
+                                  addToCart({
+                                    id: id,
+                                    title: tittle,
+                                    price: price,
+                                    image: image || '',
+                                    quantity: 1,
+                                  })
+                                )} className="hover:bg-white rounded-full w-[24px] h-[24px] flex items-center justify-center cursor-pointer">
                   <svg
                     width="16"
                     height="16"
@@ -105,7 +120,15 @@ const Contant = ({ tittle, price, price1, image }: GridItemsProps) => {
                     />
                   </svg>
                 </span>
-                <span className="hover:bg-white w-[24px] h-[24px] rounded-full  flex items-center justify-center cursor-pointer">
+                <span onClick={() => dispatch(
+                                  addToWishlist({
+                                    id: id,
+                                    title: tittle,
+                                    price: price,
+                                    img: image || '',
+                                    quantity: 1,
+                                  })
+                                )} className="hover:bg-white w-[24px] h-[24px] rounded-full  flex items-center justify-center cursor-pointer">
                   <svg
                     width="16"
                     height="16"
@@ -132,7 +155,15 @@ const Contant = ({ tittle, price, price1, image }: GridItemsProps) => {
                     </defs>
                   </svg>
                 </span>
-                <span className="hover:bg-white rounded-full w-[24px] h-[24px] flex items-center justify-center cursor-pointer">
+                <Link href='/productsDetails'  onClick={() => dispatch(
+                                  addToSingleProduct({
+                                    id: id,
+                                    title: tittle,
+                                    newPrice: price,
+                                    image: image || '',
+                                    quantity: 1,
+                                  })
+                                )}  className="hover:bg-white rounded-full w-[24px] h-[24px] flex items-center justify-center cursor-pointer">
                   <svg
                     width="16"
                     height="16"
@@ -158,7 +189,7 @@ const Contant = ({ tittle, price, price1, image }: GridItemsProps) => {
                       </linearGradient>
                     </defs>
                   </svg>
-                </span>
+                </Link>
               </div>
             </div>
           </div>

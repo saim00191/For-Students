@@ -47,7 +47,7 @@ const Hero = () => {
               </div>
 
               <button
-                className={`${josefinFont.className} mt-8 hover:bg-transparent hover:border hover:border-accent hover:text-black z-50  cursor-pointer w-[163px] h-[50px]  bg-accent text-[17px] text-white tracking-[2px] leading-[20px] flex items-center justify-center rounded-md`}
+                className={`${josefinFont.className} mt-8 hover:bg-transparent hover:border hover:border-accent hover:text-black   cursor-pointer w-[163px] h-[50px]  bg-accent text-[17px] text-white tracking-[2px] leading-[20px] flex items-center justify-center rounded-md`}
               >
                 Shop Now
               </button>
