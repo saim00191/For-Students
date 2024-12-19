@@ -4,7 +4,7 @@ import CartPart1 from "./CartPart1";
 import CartPart2 from "./CartPart2";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
-import { Josefin_Sans, Lato } from "next/font/google";
+import { Josefin_Sans } from "next/font/google";
 
 const josefinFont = Josefin_Sans({
   subsets: ["latin"],
