@@ -15,13 +15,13 @@ import image7 from "@/images/Constant7.png";
 
 const ShopList = () => {
   const products = [
-    { id: 1, tittle: "Accumsan tincidunt", price: "$26.00", price1: "$52.00", image: image1 },
-    { id: 2, tittle: "In nulla", price: "$26.00", price1: "$52.00", image: image2 },
-    { id: 3, tittle: "Vel sem", price: "$26.00", price1: "$52.00", image: image3 },
-    { id: 4, tittle: "Porttitor cum", price: "$26.00", price1: "$52.00", image: image4 },
-    { id: 5, tittle: "Nunc in", price: "$26.00", price1: "$52.00", image: image5 },
-    { id: 6, tittle: "Vitae facilisis", price: "$26.00", price1: "$52.00", image: image6 },
-    { id: 7, tittle: "Curabitur lectus", price: "$26.00", price1: "$52.00", image: image7 },
+    { id: 1, tittle: "Accumsan tincidunt", price: 300, price1: "$52.00", image: image1 },
+    { id: 2, tittle: "In nulla", price: 265, price1: "$52.00", image: image2 },
+    { id: 3, tittle: "Vel sem", price: 295, price1: "$52.00", image: image3 },
+    { id: 4, tittle: "Porttitor cum", price: 400, price1: "$52.00", image: image4 },
+    { id: 5, tittle: "Nunc in", price: 200, price1: "$52.00", image: image5 },
+    { id: 6, tittle: "Vitae facilisis", price: 260, price1: "$52.00", image: image6 },
+    { id: 7, tittle: "Curabitur lectus", price: 130, price1: "$52.00", image: image7 },
   ];
 
   return (
@@ -38,6 +38,7 @@ const ShopList = () => {
       <div className="flex flex-col gap-8 ">
         {products.map((product) => (
           <Contant
+            id={product.id}
             key={product.id}
             tittle={product.tittle}
             price={product.price}
