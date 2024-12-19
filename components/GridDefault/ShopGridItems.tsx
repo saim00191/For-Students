@@ -1,16 +1,27 @@
+"use client";
 import Container from "@/shared/Container";
 import React from "react";
-
-import  GridItemsProps from "@/types/GridItems";
-
+import GridItemsProps from "@/types/GridItems";
 import Image from "next/image";
 import { Josefin_Sans } from "next/font/google";
+import { useDispatch } from "react-redux";
+import { addToCart } from "@/redux/productSlice";
+import { addToWishlist } from "@/redux/wishlistSlice";
+import Link from "next/link";
+import { addToSingleProduct } from "@/redux/singleProduct";
 const josefinFont = Josefin_Sans({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
 
-const ShopGridItems = ({ tittle, price, price1, image }: GridItemsProps) => {
+const ShopGridItems = ({
+  tittle,
+  price,
+  price1,
+  image,
+  id,
+}: GridItemsProps) => {
+  const dispatch = useDispatch();
   return (
     <div>
       <Container>
@@ -19,7 +30,6 @@ const ShopGridItems = ({ tittle, price, price1, image }: GridItemsProps) => {
             <div className="h-[270px] bg-[#f6f7fb] w-full flex items-center justify-center ">
               {image && (
                 <div>
-                  {/* Use the Image component from Next.js for optimization */}
                   <Image
                     src={image}
                     alt={"Product Image"}
@@ -32,7 +42,19 @@ const ShopGridItems = ({ tittle, price, price1, image }: GridItemsProps) => {
             </div>
 
             <div className="w-[100px] h-[30px] absolute top-[165px] -ml-8 gap-2  left-2 hidden group-hover:flex group-hover:flex-col  justify-between items-center">
-              <span className="hover:bg-white rounded-full w-[24px] h-[24px] flex items-center justify-center cursor-pointer">
+              <span
+                onClick={() =>
+                  dispatch(
+                    addToCart({
+                      id: id,
+                      price: price,
+                      quantity: 1,
+                      image: image || "",
+                    })
+                  )
+                }
+                className="hover:bg-white rounded-full w-[24px] h-[24px] flex items-center justify-center cursor-pointer"
+              >
                 <svg
                   width="16"
                   height="16"
@@ -54,7 +76,20 @@ const ShopGridItems = ({ tittle, price, price1, image }: GridItemsProps) => {
                   />
                 </svg>
               </span>
-              <span className="hover:bg-white w-[24px] h-[24px] rounded-full  flex items-center justify-center cursor-pointer">
+              <span
+                onClick={() =>
+                  dispatch(
+                    addToWishlist({
+                      id: id,
+                      title: tittle,
+                      price: price,
+                      img: image || "",
+                      quantity: 1,
+                    })
+                  )
+                }
+                className="hover:bg-white w-[24px] h-[24px] rounded-full  flex items-center justify-center cursor-pointer"
+              >
                 <svg
                   width="16"
                   height="16"
@@ -81,7 +116,21 @@ const ShopGridItems = ({ tittle, price, price1, image }: GridItemsProps) => {
                   </defs>
                 </svg>
               </span>
-              <span className="hover:bg-white rounded-full w-[24px] h-[24px] flex items-center justify-center cursor-pointer">
+              <Link
+                href="/productsDetails"
+                onClick={() =>
+                  dispatch(
+                    addToSingleProduct({
+                      id: id,
+                      title: tittle,
+                      newPrice: price,
+                      image: image || "",
+                      quantity: 1,
+                    })
+                  )
+                }
+                className="hover:bg-white rounded-full w-[24px] h-[24px] flex items-center justify-center cursor-pointer"
+              >
                 <svg
                   width="16"
                   height="16"
@@ -107,7 +156,7 @@ const ShopGridItems = ({ tittle, price, price1, image }: GridItemsProps) => {
                     </linearGradient>
                   </defs>
                 </svg>
-              </span>
+              </Link>
             </div>
             <div className="flex flex-col items-center justify- gap-4 h-[125px] py-2 ">
               <h3
@@ -123,7 +172,7 @@ const ShopGridItems = ({ tittle, price, price1, image }: GridItemsProps) => {
               <p
                 className={`${josefinFont.className} text-[14px] leading-[16.4px]  text-[#151875] font-normal`}
               >
-                {price}{" "}
+                ${price}{" "}
                 <span
                   className={`${josefinFont.className} line-through text-[14px] leading-[16.4px]  text-[#F701A8] font-normal`}
                 >

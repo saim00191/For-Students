@@ -43,9 +43,9 @@ const Header = () => {
     };
   }, [isOpen]);
   return (
-    <>
+    <div className=" sticky top-0 z-50">
       <HeaderTop />
-      <div className="bg-white w-full h-[60px] lg:flex items-center">
+      <div className="bg-white w-full h-[60px] lg:flex items-center ">
         <Container className="lg:flex-1">
           <div className="h-[40px]  flex my-2 px-2 lg:px-0 items-center justify-between">
             <div className="lg:flex lg:items-center  lg:gap-20">
@@ -146,7 +146,7 @@ const Header = () => {
           </div>
         </Container>
       </div>
-    </>
+    </div>
   );
 };
 

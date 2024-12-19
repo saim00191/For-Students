@@ -21,18 +21,18 @@ import Partner from "@/shared/Partners";
 
 const GridDeault = () => {
   const products = [
-    { id: 1, tittle: "Vel elit euismod", price: "$26.00", price1: "$42.00", image: image1 },
-    { id: 2, tittle: "Ultricies condimentum imperdiet", price: "$26.00", price1: "$42.00", image: image2 },
-    { id: 3, tittle: "Vitae suspendisse sed", price: "$26.00", price1: "$42.00", image: image3 },
-    { id: 4, tittle: "Sed at fermentum", price: "$26.00", price1: "$42.00", image: image4 },
-    { id: 5, tittle: "Fusce pellentesque at", price: "$26.00", price1: "$42.00", image: image5 },
-    { id: 6, tittle: "Vestibulum magna laoreet", price: "$26.00", price1: "$42.00", image: image6 },
-    { id: 7, tittle: "Sollicitudin amet orci", price: "$26.00", price1: "$42.00", image: image7 },
-    { id: 8, tittle: "Ultrices mauris sit", price: "$26.00", price1: "$42.00", image: image8 },
-    { id: 9, tittle: "Pellentesque condimentum ac", price: "$26.00", price1: "$42.00", image: image9 },
-    { id: 10, tittle: "Cras scelerisque velit", price: "$26.00", price1: "$42.00", image: image10 },
-    { id: 11, tittle: "Lectus vulputate faucibus", price: "$26.00", price1: "$42.00", image: image11 },
-    { id: 12, tittle: "Purus risus, ut", price: "$26.00", price1: "$42.00", image: image12 },
+    { id: 119, tittle: "Vel elit euismod", price: 260, price1: "$42.00", image: image1 },
+    { id: 120, tittle: "Ultricies condimentum imperdiet", price: 400, price1: "$42.00", image: image2 },
+    { id: 121, tittle: "Vitae suspendisse sed", price: 370, price1: "$42.00", image: image3 },
+    { id: 122, tittle: "Sed at fermentum", price: 180, price1: "$42.00", image: image4 },
+    { id: 123, tittle: "Fusce pellentesque at", price: 250, price1: "$42.00", image: image5 },
+    { id: 124, tittle: "Vestibulum magna laoreet", price: 370, price1: "$42.00", image: image6 },
+    { id: 125, tittle: "Sollicitudin amet orci", price: 280, price1: "$42.00", image: image7 },
+    { id: 126, tittle: "Ultrices mauris sit", price: 235, price1: "$42.00", image: image8 },
+    { id: 127, tittle: "Pellentesque condimentum ac", price: 165, price1: "$42.00", image: image9 },
+    { id: 128, tittle: "Cras scelerisque velit", price: 450, price1: "$42.00", image: image10 },
+    { id: 129, tittle: "Lectus vulputate faucibus", price: 300, price1: "$42.00", image: image11 },
+    { id: 130, tittle: "Purus risus, ut", price: 245, price1: "$42.00", image: image12 },
   ];
 
   return (
@@ -53,6 +53,7 @@ const GridDeault = () => {
       <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center">
         {products.map((product) => (
           <ShopGridItems
+            id={product.id}
             key={product.id}
             tittle={product.tittle}
             price={product.price}

@@ -2,7 +2,7 @@ import React from "react";
 import { Josefin_Sans, Lato } from "next/font/google";
 import Container from "@/shared/Container";
 import Image from "next/image";
-import Image1 from '@/images/DiscountItemImg.png'
+import Image1 from "@/images/DiscountItemImg.png";
 
 const josefinFont = Josefin_Sans({
   subsets: ["latin"],
@@ -43,7 +43,7 @@ const DiscountItem = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row  items-center justify-between space-y-6 lg:space-y-0 lg:h-[597px] lg:space-x-6">
-        <div className="flex flex-col w-full lg:w-[550px] px-4 sm:px-6 md:px-8">
+        <div className="flex flex-col w-full lg:w-[550px] px-4">
           <h2
             className={`${josefinFont.className} text-[35px] leading-[46px] tracking-[1.5px] text-[#151875]`}
           >
@@ -55,13 +55,13 @@ const DiscountItem = () => {
             Eams Sofa Compact
           </p>
           <p
-            className={`${josefinFont.className} mt-4 text-[#B7BACB] text-[17px] leading-[30px] tracking-[2px]`}
+            className={`${josefinFont.className} mt-4 text-[#B7BACB] text-[17px] mdl:leading-[30px] tracking-[2px]`}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eget
             feugiat habitasse nec, bibendum condimentum.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 lgl:grid-cols-2 gap-5 mt-5">
             <div className="flex flex-col gap-5">
               <div className="flex gap-1 items-center">
                 <svg
@@ -80,12 +80,12 @@ const DiscountItem = () => {
                   />
                 </svg>
                 <p
-                  className={`${lato.className} text-[#B8B8DC] font-normal text-[16px] leading-[30px] tracking-[2px]`}
+                  className={`${lato.className} text-[#B8B8DC] font-normal text-[14px] xs:text-[15px] xsm:text-[16px] mdl:leading-[30px] tracking-[2px]`}
                 >
                   Material expose like metals
                 </p>
               </div>
-              <div className="flex gap-1 items-center">
+              <div className="flex gap-1 items-center lgl:mt-6">
                 <svg
                   width="18"
                   height="13"
@@ -102,9 +102,9 @@ const DiscountItem = () => {
                   />
                 </svg>
                 <p
-                  className={`${lato.className} text-[#B8B8DC] font-normal text-[16px] leading-[30px] tracking-[2px]`}
+                  className={`${lato.className} text-[#B8B8DC]  font-normal text-[14px] xs:text-[15px] xsm:text-[16px] mdl:leading-[30px] tracking-[2px]`}
                 >
-                  Material expose like metals
+                  Simple neutral colours
                 </p>
               </div>
             </div>
@@ -126,9 +126,9 @@ const DiscountItem = () => {
                   />
                 </svg>
                 <p
-                  className={`${lato.className} text-[#B8B8DC] font-normal text-[16px] leading-[30px] tracking-[2px]`}
+                  className={`${lato.className} text-[#B8B8DC]  font-normal text-[14px] xs:text-[15px] xsm:text-[16px] mdl:leading-[30px] tracking-[2px]`}
                 >
-                  Material expose like metals
+                  Clear lines and geomatric figures
                 </p>
               </div>
               <div className="flex gap-1 items-center">
@@ -148,7 +148,7 @@ const DiscountItem = () => {
                   />
                 </svg>
                 <p
-                  className={`${lato.className} text-[#B8B8DC] font-normal text-[16px] leading-[30px] tracking-[2px]`}
+                  className={`${lato.className} text-[#B8B8DC]  lgl:mt-6 font-normal text-[14px] xs:text-[15px] xsm:text-[16px] mdl:leading-[30px] tracking-[2px]`}
                 >
                   Material expose like metals
                 </p>
@@ -163,7 +163,7 @@ const DiscountItem = () => {
           </button>
         </div>
 
-        <div className="h-[400px] sm:h-[500px] lg:h-[597px]  w-full lg:w-[620px] relative flex items-center justify-center">
+        <div className="h-[400px] sm:h-[500px] lg:h-[597px]  w-full lg:w-[699px] px-3 xsm:px-4 xsm:pt-20 relative flex items-center justify-center">
           <svg
             width="472"
             height="472"

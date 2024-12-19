@@ -99,6 +99,7 @@ export const HeaderTopItems = [
           />
         </svg>
       ),
+      cart : true
     },
   ];
   

@@ -18,17 +18,17 @@ const Contant = ({ tittle, price, price1, image }: GridItemsProps) => {
     <div>
       <Container className=" w-full  ">
         <div className="w-full  flex  justify-center">
-          <div className=" w-full p-4 flex flex-col lg:flex-row gap-3 shadow group ">
-            <div className="h-[217px] w-[313px] bg-[#f6f7fb] flex items-center justify-center ">
+          <div className=" w-full p-4 flex flex-col mdl:flex-row gap-3 shadow group ">
+            <div className="h-[217px] w-full md:w-[313px] bg-[#f6f7fb] flex items-center">
               {image && (
                 <div>
-                  {/* Use the Image component from Next.js for optimization */}
+
                   <Image
                     src={image}
                     alt={"Product Image"}
                     width={313}
                     height={217}
-                    className=" flex justify-center h-[217]"
+                    className=" flex  h-[217]"
                   />
                 </div>
               )}

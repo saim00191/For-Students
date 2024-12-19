@@ -23,7 +23,7 @@ const Signle = () => {
   return (
     <div>
       <Container className="py-16">
-        <div className="grid mdl:grid-cols-4 grid-cols-1 gap-5">
+        <div className="grid mdl:grid-cols-4 grid-cols-1 gap-5 px-3">
           <div className="col-span-3">
             <div className="flex flex-col gap-11">
               <div className=" h-[453px]">

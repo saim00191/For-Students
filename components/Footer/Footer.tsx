@@ -17,10 +17,10 @@ const roboto = Roboto({
 
 const Footer = () => {
   return (
-    <div className="bg-[#EEEFFB] py-12 relative" >
-      <Container className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-5 gap-8 md:gap-12">
+    <div className="bg-[#EEEFFB] py-12 relative">
+      <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-5 lgl:grid-cols-5 gap-8 md:gap-12">
         {/* First Column */}
-        <div className="flex flex-col gap-5 px-3 lg:px-0 justify-center  col-span-1 lg:col-span-2">
+        <div className="flex flex-col gap-6 px-3 lg:px-0 justify-center col-span-1 lg:col-span-2">
           <h2
             className={`${josefinFont.className} text-[32px] sm:text-[38px] text-[#000000] leading-[40px] sm:leading-[44px]`}
           >
@@ -49,8 +49,10 @@ const Footer = () => {
         </div>
 
         {/* Second Column - Categories */}
-        <div className="flex flex-col gap-5 px-3 lg:px-0 justify-center mt-12 lg:mt-0">
-          <h2 className={`${josefinFont.className} text-[20px] sm:text-[22px] text-[#000000] leading-[24px] sm:leading-[25px]`}>
+        <div className="flex flex-col gap-6 px-3 lg:px-0 justify-center mt-12 lg:mt-0">
+          <h2
+            className={`${josefinFont.className} text-[20px] sm:text-[22px] text-[#000000] leading-[24px] sm:leading-[25px]`}
+          >
             Categories
           </h2>
           <p className={`${lato.className} text-[14px] sm:text-[16px] font-normal text-[#8A8FB9]`}>Laptops & Computers</p>
@@ -61,8 +63,10 @@ const Footer = () => {
         </div>
 
         {/* Third Column - Customer Care */}
-        <div className="flex flex-col gap-5 px-3 lg:px-0 justify-center mt-12 lg:mt-0">
-          <h2 className={`${josefinFont.className} text-[20px] sm:text-[22px] text-[#000000] leading-[24px] sm:leading-[25px]`}>
+        <div className="flex flex-col gap-6 px-3 lg:px-0 justify-center mt-12 lg:mt-0">
+          <h2
+            className={`${josefinFont.className} text-[20px] sm:text-[22px] text-[#000000] leading-[24px] sm:leading-[25px]`}
+          >
             Customer Care
           </h2>
           <p className={`${lato.className} text-[14px] sm:text-[16px] font-normal text-[#8A8FB9]`}>My Account</p>
@@ -73,8 +77,10 @@ const Footer = () => {
         </div>
 
         {/* Fourth Column - Pages */}
-        <div className="flex flex-col gap-5 px-3 lg:px-0 justify-center mt-12 lg:mt-0">
-          <h2 className={`${josefinFont.className} text-[20px] sm:text-[22px] text-[#000000] leading-[24px] sm:leading-[25px]`}>
+        <div className="flex flex-col gap-6 px-3 lg:px-0 justify-center md:mt-[85px] mt-12 lgl:mt-[50px]">
+          <h2
+            className={`${josefinFont.className} text-[20px] sm:text-[22px] text-[#000000] leading-[24px] sm:leading-[25px]`}
+          >
             Pages
           </h2>
           <p className={`${lato.className} text-[14px] sm:text-[16px] font-normal text-[#8A8FB9]`}>Blog</p>

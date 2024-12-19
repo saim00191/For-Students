@@ -35,7 +35,7 @@ const ShopList = () => {
         tittle2="View:"
         icons={[<IoGrid key="grid" />, <FaList key="list" />]}
       />
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 ">
         {products.map((product) => (
           <Contant
             key={product.id}

@@ -22,7 +22,7 @@ const Blogspage = () => {
     <div>
       <Hero heading="Blog Page" tittle="Home . Page . " text="Blog Page" />
       <Container className="py-24">
-        <div className="grid md:grid-cols-4 gap-5">
+        <div className="grid md:grid-cols-4 gap-5 px-1 xs:px-2 ssm:px-4 sm:px-5 md:px-6">
           <div className="col-span-3 ">
             <div className="flex flex-col gap-11">
               <div className=" h-[453px]">

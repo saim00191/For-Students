@@ -19,7 +19,7 @@ const Sort = ({
   return (
     <div className="py-36">
       <Container>
-        <div className="flex md:flex-row flex-col justify-between items-start sm:items-center ">
+        <div className="flex md:flex-row flex-col justify-between items-start sm:items-center px-4">
           <div className="flex flex-col items-center md:items-start">
             <h1 className={`text-[22px] font-bold ${Josefin_San.className} `}>
               {heading}

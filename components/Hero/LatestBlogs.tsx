@@ -23,13 +23,13 @@ const author = [
 const LatestBlogs = () => {
   return (
     <Container className="py-12 flex flex-col items-center justify-center">
-      <div className="grid  grid-cols-1 md:grid-cols-2 lgl:grid-cols-3 gap-[26px]">
+      <div className="grid  grid-cols-1 sm:grid-cols-2 mdl:grid-cols-3 gap-[45px] px-2 ssm:px-10 xsm:px-6">
         {author.map((item) => (
-          <div key={item.id} className="w-[370px] h-[493px]  flex flex-col items-center">
+          <div key={item.id} className="lgll:w-[370px] w-full  h-[493px]  flex flex-col items-center">
           <div className="w-full h-[255px] rounded-[8px]">
-            <Image src={item.image} alt="Image1" />
+            <Image src={item.image} alt="Image1" className="h-[75%]"/>
           </div>
-          <div className="h-[239px] flex flex-col justify-between py-3 shadow-md w-full px-3">
+          <div className="h-[239px] flex flex-col justify-between shadow-md w-full px-3">
             <div className="flex justify-between">
               <div className="w-[74px] h-[14px] flex justify-between items-center">
                 <span>

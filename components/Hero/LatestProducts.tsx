@@ -1,6 +1,8 @@
+"use client";
 import Container from "@/shared/Container";
 import React from "react";
 import { Josefin_Sans, Lato } from "next/font/google";
+import { addToCart } from "@/redux/productSlice";
 import Image1 from "@/images/LatestProduct1.png";
 import Image2 from "@/images/LatestProduct2.png";
 import Image3 from "@/images/LatestProduct3.png";
@@ -8,6 +10,10 @@ import Image4 from "@/images/LatestProduct4.png";
 import Image5 from "@/images/LatestProduct5.png";
 import Image6 from "@/images/LatestProduct6.png";
 import Image from "next/image";
+import { useDispatch } from "react-redux";
+import { addToWishlist } from "@/redux/wishlistSlice";
+import { addToSingleProduct } from "@/redux/singleProduct";
+import Link from "next/link";
 
 const josefinFont = Josefin_Sans({
   subsets: ["latin"],
@@ -18,9 +24,23 @@ const lato = Lato({
   weight: ["400", "700"],
 });
 
-const Images = [Image1, Image2, Image3, Image4, Image5, Image6];
+const LatestProductItems = [
+  {
+    id: 105,
+    title: "Serenity Armchair",
+    image: Image1,
+    price: 249.99,
+    oldPrice: 259.99,
+  },
+  { id: 106, title: "Driftwood Chair", image: Image2, price: 172 },
+  { id: 107, title: "Cosmos Swivel", image: Image3, price: 280 },
+  { id: 108, title: "Classic Barrel", image: Image4, price: 360 },
+  { id: 109, title: "Savanna Armchair", image: Image5, price: 120 },
+  { id: 110, title: "Polaris Armchair", image: Image6, price: 400 },
+];
 
 const LatestProducts = () => {
+  const dispatch = useDispatch();
   return (
     <Container className="py-12   flex flex-col items-center">
       <h2
@@ -50,14 +70,33 @@ const LatestProducts = () => {
           Special Offer
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-3 py-6 gap-8">
-        {Images.map((item, index) => (
-          <div key={index} className="w-full xs:w-[365px] h-[306px] relative group">
+      <div className="grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-3 py-6 gap-8 px-4">
+        {LatestProductItems.map((item, index) => (
+          <div
+            key={index}
+            className="w-full xs:w-[330px] xsm:w-[365px] h-[306px] relative group"
+          >
             <div className="h-[270px] bg-[#f7f7f7] flex items-center justify-center">
-              <Image src={item} alt="Product" className="w-[223px] h-[229px]" />
+              <Image
+                src={item.image}
+                alt="Product"
+                className="w-[223px] h-[229px]"
+              />
             </div>
             <div className="h-[100px] hidden group-hover:flex flex-col justify-between items-center  w-8 absolute top-[160px] left-[22px]">
-              <span className="hover:bg-white cursor-pointer h-[30px] w-[30px] rounded-full flex items-center justify-center">
+              <span
+                onClick={() =>
+                  dispatch(
+                    addToCart({
+                      id: item.id,
+                      price: item.price,
+                      quantity: 1,
+                      image: item.image,
+                    })
+                  )
+                }
+                className="hover:bg-white cursor-pointer h-[30px] w-[30px] rounded-full flex items-center justify-center"
+              >
                 <svg
                   width="19"
                   height="19"
@@ -79,7 +118,20 @@ const LatestProducts = () => {
                   />
                 </svg>
               </span>
-              <span className="hover:bg-white cursor-pointer h-[30px] w-[30px] rounded-full flex items-center justify-center">
+              <span
+                onClick={() =>
+                  dispatch(
+                    addToWishlist({
+                      id: item.id,
+                      title: item.title,
+                      price: item.price,
+                      img: item.image,
+                      quantity: 1,
+                    })
+                  )
+                }
+                className="hover:bg-white cursor-pointer h-[30px] w-[30px] rounded-full flex items-center justify-center"
+              >
                 <svg
                   width="17"
                   height="17"
@@ -93,7 +145,21 @@ const LatestProducts = () => {
                   />
                 </svg>
               </span>
-              <span className="hover:bg-white cursor-pointer h-[30px] w-[30px] rounded-full flex items-center justify-center">
+              <Link
+                href="/productsDetails"
+                onClick={() =>
+                  dispatch(
+                    addToSingleProduct({
+                      id: item.id,
+                      title: item.title,
+                      newPrice: item.price,
+                      image: item.image,
+                      quantity: 1,
+                    })
+                  )
+                }
+                className="hover:bg-white cursor-pointer h-[30px] w-[30px] rounded-full flex items-center justify-center"
+              >
                 <svg
                   width="15"
                   height="15"
@@ -106,7 +172,7 @@ const LatestProducts = () => {
                     fill="#2F1AC4"
                   />
                 </svg>
-              </span>
+              </Link>
             </div>
             <div className="absolute top-[25px] left-[18px] hidden group-hover:block">
               <svg
@@ -131,18 +197,18 @@ const LatestProducts = () => {
               <h2
                 className={`${josefinFont.className} text-[16px] leading-[18.65px] text-[#151875]`}
               >
-                Comfort Handy Craft
+                {item.title}
               </h2>
               <div className="flex gap-2 items-center">
                 <p
                   className={`${josefinFont.className} text-[14px] leading-[16.65px] text-[#151875]`}
                 >
-                  $42.00
+                  ${item.price}
                 </p>
                 <p
                   className={`${josefinFont.className} text-[12px] leading-[16.65px] line-through text-[#FB2448]`}
                 >
-                  $65.00
+                  ${item.oldPrice}
                 </p>
               </div>
             </div>

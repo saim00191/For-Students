@@ -19,13 +19,13 @@ const lato = Lato({
 const TrendingProducts2 = () => {
   return (
     <Container className="py-2">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 px-2 xsm:px-5 sm:px-8 mdl:grid-cols-3 gap-8">
         {/* First Product */}
         <div className="w-full  hover:bg-[#EEEFFB] h-[270px] relative shadow-xl">
           <Image
             src={Image1}
             alt="Image 1"
-            className="w-auto lg:w-[213px] h-[207px] absolute left-[50%] transform -translate-x-[50%] top-[72px]"
+            className="w-auto lg:w-[213px] h-[207px] absolute left-[65%] transform -translate-x-[50%] top-[72px]"
           />
           <div className="flex flex-col absolute top-6 left-5">
             <h2
@@ -46,7 +46,7 @@ const TrendingProducts2 = () => {
           <Image
             src={Image2}
             alt="Image 2"
-            className="w-auto lg:w-[312px] h-[207px] absolute left-[50%] transform -translate-x-[50%] top-[72px]"
+            className="w-auto lg:w-[312px] h-[207px] absolute left-[65%] transform -translate-x-[50%] top-[72px]"
           />
           <div className="flex flex-col absolute top-6 left-5">
             <h2
@@ -69,10 +69,16 @@ const TrendingProducts2 = () => {
               <Image src={Image3} alt="Image3" className="w-[64px] h-[71px]" />
             </div>
             <div className="flex flex-col gap-2">
-              <p className={`${josefinFont.className} text-[16px] leading-[18.65px] text-[#151875]`}>
+              <p
+                className={`${josefinFont.className} text-[16px] leading-[18.65px] text-[#151875]`}
+              >
                 Executive Seat chair
               </p>
-              <p className={`${josefinFont.className} text-[12px] leading-[12px] text-[#151875]`}>$32.00</p>
+              <p
+                className={`${josefinFont.className} text-[12px] leading-[12px] text-[#151875]`}
+              >
+                $32.00
+              </p>
             </div>
           </div>
 
@@ -81,10 +87,16 @@ const TrendingProducts2 = () => {
               <Image src={Image4} alt="Image4" className="w-[64px] h-[71px]" />
             </div>
             <div className="flex flex-col gap-2">
-              <p className={`${josefinFont.className} text-[16px] leading-[18.65px] text-[#151875]`}>
+              <p
+                className={`${josefinFont.className} text-[16px] leading-[18.65px] text-[#151875]`}
+              >
                 Executive Seat chair
               </p>
-              <p className={`${josefinFont.className} text-[12px] leading-[12px] text-[#151875]`}>$32.00</p>
+              <p
+                className={`${josefinFont.className} text-[12px] leading-[12px] text-[#151875]`}
+              >
+                $32.00
+              </p>
             </div>
           </div>
 
@@ -93,10 +105,16 @@ const TrendingProducts2 = () => {
               <Image src={Image5} alt="Image5" className="w-[64px] h-[71px]" />
             </div>
             <div className="flex flex-col gap-2">
-              <p className={`${josefinFont.className} text-[16px] leading-[18.65px] text-[#151875]`}>
+              <p
+                className={`${josefinFont.className} text-[16px] leading-[18.65px] text-[#151875]`}
+              >
                 Executive Seat chair
               </p>
-              <p className={`${josefinFont.className} text-[12px] leading-[12px] text-[#151875]`}>$32.00</p>
+              <p
+                className={`${josefinFont.className} text-[12px] leading-[12px] text-[#151875]`}
+              >
+                $32.00
+              </p>
             </div>
           </div>
         </div>
